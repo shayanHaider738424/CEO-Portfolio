@@ -617,14 +617,37 @@
         transform: translateY(0);
       }
 
-      .nav-links.active li:nth-child(1) { transition-delay: 0.05s; }
-      .nav-links.active li:nth-child(2) { transition-delay: 0.1s; }
-      .nav-links.active li:nth-child(3) { transition-delay: 0.15s; }
-      .nav-links.active li:nth-child(4) { transition-delay: 0.2s; }
-      .nav-links.active li:nth-child(5) { transition-delay: 0.25s; }
-      .nav-links.active li:nth-child(6) { transition-delay: 0.3s; }
-      .nav-links.active li:nth-child(7) { transition-delay: 0.35s; }
-      .nav-links.active li:nth-child(8) { transition-delay: 0.4s; }
+      .nav-links.active li:nth-child(1) {
+        transition-delay: 0.05s;
+      }
+
+      .nav-links.active li:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+
+      .nav-links.active li:nth-child(3) {
+        transition-delay: 0.15s;
+      }
+
+      .nav-links.active li:nth-child(4) {
+        transition-delay: 0.2s;
+      }
+
+      .nav-links.active li:nth-child(5) {
+        transition-delay: 0.25s;
+      }
+
+      .nav-links.active li:nth-child(6) {
+        transition-delay: 0.3s;
+      }
+
+      .nav-links.active li:nth-child(7) {
+        transition-delay: 0.35s;
+      }
+
+      .nav-links.active li:nth-child(8) {
+        transition-delay: 0.4s;
+      }
 
       .menu-toggle.active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
@@ -657,6 +680,53 @@
 
       .lightbox-close {
         top: -2rem;
+        right: 0.5rem;
+      }
+
+      /* Fix lightbox card: full content visible on mobile */
+      .lightbox-content {
+        max-height: none;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .lightbox-img-wrapper {
+        max-height: 45vw;
+        min-height: 200px;
+      }
+
+      .lightbox-img {
+        max-height: 45vw;
+      }
+
+      .lightbox-info {
+        padding: 1.2rem;
+      }
+
+      .lightbox-title {
+        font-size: 1.2rem;
+      }
+
+      .lightbox-desc {
+        font-size: 0.95rem;
+      }
+
+      /* Nav arrows: move inside the image, not outside viewport */
+      .lightbox-nav {
+        position: absolute;
+        top: auto;
+        bottom: calc(100% - 45vw - 25px);
+        transform: none;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+
+      .lightbox-prev {
+        left: 0.5rem;
+      }
+
+      .lightbox-next {
         right: 0.5rem;
       }
     }
