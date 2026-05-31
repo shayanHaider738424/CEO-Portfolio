@@ -367,7 +367,7 @@
 
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
       gap: 3rem;
       margin-top: 2rem;
     }
@@ -992,6 +992,29 @@
       .hero-roles {
         justify-content: center;
       }
+
+      /* Fix viewport overflow */
+      section {
+        overflow-x: hidden;
+      }
+
+      /* Fix video grid on mobile */
+      .video-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      /* Fix Lions Journey timeline 2-col on mobile */
+      .lions-timeline-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+      }
+
+      /* Training institutes flex on mobile */
+      #lions .achieve-card {
+        min-width: unset !important;
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -1136,7 +1159,7 @@
         <div class="section-label">Lions Clubs International</div>
         <h2 class="section-title">Lions Leadership<br>Journey</h2>
         <div class="gold-line"></div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem;" class="lions-timeline-grid">
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-dot"></div>
