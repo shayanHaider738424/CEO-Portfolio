@@ -475,6 +475,21 @@
       color: rgba(253, 248, 239, 0.6);
     }
 
+    /* ── TRAINING INSTITUTES ── */
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .training-card {
+      text-align: center;
+      min-width: 0;
+      /* prevent grid blowout */
+    }
+
+
     /* ── ACHIEVEMENTS ── */
     #achievements {
       background: var(--dark);
@@ -482,7 +497,7 @@
 
     .achieve-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
 
@@ -641,8 +656,8 @@
     .gallery-teaser-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
 
     .gallery-teaser-card {
@@ -1010,6 +1025,12 @@
         gap: 0 !important;
       }
 
+      /* Fix Training Institutes on mobile - single column */
+      .training-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
       /* Training institutes flex on mobile */
       #lions .achieve-card {
         min-width: unset !important;
@@ -1215,10 +1236,10 @@
         </div>
 
         <!-- Training Institutes -->
-        <div style="margin-top:3rem;">
+        <div style="margin-top:2rem;">
           <div class="section-label">Lions Training Institutes</div>
-          <div style="display:flex; gap:2rem; flex-wrap:wrap; margin-top:1rem;">
-            <div class="achieve-card" style="flex:1; min-width:200px; text-align:center;">
+          <div class="training-grid ">
+            <div class="achieve-card training-card" style="flex:1; min-width:200px; text-align:center;">
               <div class="achieve-icon">🎓</div>
               <div class="achieve-title">RLLI</div>
               <div class="achieve-detail">Regional Lions Leadership Institute</div>
